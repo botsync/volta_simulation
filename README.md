@@ -1,20 +1,33 @@
 # Running Volta in the Simulation
 
-## Bringing up the simulation
-1. To run in Simulation, launch the gazebo node first using
-```roslaunch volta_description gazebo.launch```
-2. Followed by:
-```roslaunch volta_description simulation.launch```
-3. Open Rviz and use the config file at volta_navigation/rviz_config/navigation.rviz to visualize.
+## Steps to Launch:
+### step 1 create the catkin_ws
+```
+$ mkdir -p /home/workspace/catkin_ws/src
+$ cd /home/workspace/catkin_ws/src
+$ catkin_init_workspace
+$ cd ..
+$ catkin_make
+```
 
-By default a map of the simulation environment has been built and stored for convenience sake. 
+### Step 2 Perform a System Update/Upgrade
+```
+$ apt-get update
+$ apt-get upgrade -y
+```
+### Step 3 Clone the Package in src
+```
+$ cd /home/workspace/catkin_ws/src
+$ git clone https://github.com/botsync/volta_simulation
+```
+### Step 4 Build the Packages
+```
+$ catkin_make
+$ source devel/setup.bash
+```
+### Step 5 run the shell script
+```
+$ cd /home/workspace/catkin_ws/src
+$ ./navigate.sh 
+```
 
-## Mapping the environment 
-To change the environment in the simulation, update the argument in the gazebo.launch file with the exact path to the world file.
-
-You will need to run mapping. You can simply use the argument in one_robot.launch to turn gmapping true.
-```roslaunch volta_description one_robot.launch gmapping:=true```
-
-To visualize the map updations, use rviz and open this config volta_navigation/rviz_config/navigation.rviz.
-
-To save the map, run ```rosrun map_server map_saver```
