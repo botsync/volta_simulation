@@ -25,9 +25,14 @@ $ git clone https://github.com/botsync/volta_simulation
 $ catkin_make
 $ source devel/setup.bash
 ```
-### Step 5 run the shell script
+### Step 5 For mapping the environment
 ```
 $ cd /home/workspace/catkin_ws/src
-$ ./navigate.sh 
+$ ./Mapping.sh 
+```
+### Step 5 For Navigating the environment
+```
+$ cd /home/workspace/catkin_ws/src
+$ ./Navigation.sh 
 ```
 
