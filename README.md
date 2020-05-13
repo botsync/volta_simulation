@@ -44,7 +44,7 @@ $ roslaunch volta_navigation navigation.launch gmapping:=true
 ```
 $ rosrun rviz rviz  
 ```
-    You can then open the volta configured rviz environment by opening the volta rviz config file, located under volta_navigation->rviz_config->navigation.rviz, from the rviz tool 
+You can then open the volta configured rviz environment by opening the volta rviz config file, located under volta_navigation->rviz_config->navigation.rviz, from the rviz tool 
  
  * In order to control the robot, launch the teleoperation node by running:     
 ```
