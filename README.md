@@ -1,4 +1,11 @@
-# Running Volta in the Simulation
+# Volta
+ROS packages used to run the VOlta only in simulation
+
+  * Volta_control - Control configuration
+  * Volta_description - Volta Robot description and gazebo simulation world file
+  * volta_localization - Robot Localization using EKF
+  * Volta_navigation - Navigation configurations 
+  * volta_teleoperation - Control the robot using keyboard or Joystick
 
 ## Steps to Launch:
 ### step 1 create the catkin_ws
