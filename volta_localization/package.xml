@@ -4,11 +4,10 @@
   <version>6.0.0</version>
   <description>The volta_localization package</description>
 
+  <description>The volta_localization package</description>
   <maintainer email="nikhil@botsync.sg">Nikhil Venkatesh</maintainer>
-  <license>BSD</license>
 
-  <url type="repository">http://bitbucket.org/botsync/volta_localization</url>
-
+  <license>BSD2</license>
   <author email="nikhil@botsync.sg">Nikhil Venkatesh</author>
 
   <buildtool_depend>catkin</buildtool_depend>
