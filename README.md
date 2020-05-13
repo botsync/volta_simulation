@@ -1,11 +1,11 @@
 # Volta
-ROS packages used to run the Volta only in simulation
+ROS packages used to run the Volta in simulation
 
-  * volta_control - Control configuration required for ROS control.
-  * volta_description - Volta Robot description (URDF files) and gazebo simulation world file.
-  * volta_localization - Sensor fusion of wheel odometry and IMU data using the robot localization package.
-  * volta_navigation - Navigation configurations .
-  * volta_teleoperation - Control the robot using keyboard or Joystick.
+* volta_control - Control configuration required for ROS control.
+* volta_description - Volta Robot description (URDF files) and gazebo simulation world file.
+* volta_localization - Sensor fusion of wheel odometry and IMU data using the robot localization package.
+* volta_navigation - Contains files required for running gmapping, amcl and move_base ROS packages.
+* volta_teleoperation - Control the robot using keyboard or Joystick.
 
 ## Steps to Launch Volta:
 
@@ -14,7 +14,7 @@ ROS packages used to run the Volta only in simulation
 ```
 $ roslaunch volta_description gazebo.launch 
 ```
- * Once the gazebo simulation environment is launched, run the following to load the Volta robot:  
+ * Once the gazebo simulation environment is launched, run the following to spawn the Volta robot:  
  ```
 $ roslaunch volta_description simulation.launch 
 ```
@@ -35,7 +35,7 @@ $ roslaunch volta_description simulation.launch
    
    
 ### 2. Mapping an environment with Volta
- * Once the gazebo world is launched and the Volta robot is loaded into the simulation environment, the mapping node can be launched by running:   
+ * Once the gazebo world is launched and the Volta robot is spawned into the simulation environment, the mapping node can be launched by running:   
 ```
 $ roslaunch volta_navigation navigation.launch gmapping:=true  
 ```
@@ -57,7 +57,7 @@ $ roslaunch map_server map_saver –f <filename>
 ```
    
 ### 3. Navigation with Volta
- * Once the gazebo world is launched and the Volta robot is loaded into the simulation environment, the navigaation node can be launched by running:   
+ * Once the gazebo world is launched and the Volta robot is spawned into the simulation environment, the navigaation node can be launched by running:   
 ```
 $ roslaunch volta_navigation navigation.launch 
 ```
