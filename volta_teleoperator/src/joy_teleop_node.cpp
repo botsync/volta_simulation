@@ -10,7 +10,7 @@ modification, are permitted provided that the following conditions are met:
     * Redistributions in binary form must reproduce the above copyright
       notice, this list of conditions and the following disclaimer in the
       documentation and/or other materials provided with the distribution.
-    * Neither the name of the Botsync Pte. Ltd. nor the 
+    * Neither the name of the Botsync Pte. Ltd. nor the
       names of its contributors may be used to endorse or promote products
       derived from this software without specific prior written permission.
 
@@ -52,14 +52,9 @@ int main(int argc, char** argv) {
 
     nh.param<std::string>("joy_topic", joy_topic, "/joy");
 
-    cmd_vel_pub = nh.advertise<geometry_msgs::Twist>(cmd_vel_topic, 1); 
+    cmd_vel_pub = nh.advertise<geometry_msgs::Twist>(cmd_vel_topic, 1);
 
     joy_subscriber = nh.subscribe(joy_topic, 1, joy_callback);
-
-    if (enable_e_stop) {
-        ROS_INFO("Enable e-stop: %d", enable_e_stop);
-        e_stop_pub = nh.advertise<std_msgs::Bool>(e_stop_pub_topic, 1);
-    }
 
     ros::spin();
 }

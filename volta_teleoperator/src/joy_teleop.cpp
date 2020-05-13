@@ -10,7 +10,7 @@ modification, are permitted provided that the following conditions are met:
     * Redistributions in binary form must reproduce the above copyright
       notice, this list of conditions and the following disclaimer in the
       documentation and/or other materials provided with the distribution.
-    * Neither the name of the Botsync Pte. Ltd. nor the 
+    * Neither the name of the Botsync Pte. Ltd. nor the
       names of its contributors may be used to endorse or promote products
       derived from this software without specific prior written permission.
 
@@ -32,7 +32,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 void joy_callback(const sensor_msgs::Joy::ConstPtr& joy) {
     geometry_msgs::Twist cmd;
 
-    if (enable_e_stop && joy->buttons[e_stop_button] && !e_stop_status) {
+    if (joy->buttons[e_stop_button] && !e_stop_status) {
         std_msgs::Bool e_stop_msg;
 
         e_stop_msg.data = true;
@@ -47,7 +47,7 @@ void joy_callback(const sensor_msgs::Joy::ConstPtr& joy) {
         cmd.angular.z = 0.0;
 
         e_stop_pub.publish(e_stop_msg);
-    } else if (enable_e_stop && joy->buttons[e_stop_button] && e_stop_status) {
+    } else if (joy->buttons[e_stop_button] && e_stop_status) {
         std_msgs::Bool e_stop_msg;
 
         e_stop_msg.data = false;
