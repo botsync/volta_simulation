@@ -1,45 +1,35 @@
 # Volta
-ROS packages used to run the VOlta only in simulation
+ROS packages used to run the Volta only in simulation
 
-  * Volta_control - Control configuration
-  * Volta_description - Volta Robot description and gazebo simulation world file
-  * volta_localization - Robot Localization using EKF
-  * Volta_navigation - Navigation configurations 
-  * volta_teleoperation - Control the robot using keyboard or Joystick
+  * Volta_control - Control configuration required for ROS control.
+  * Volta_description - Volta Robot description (URDF files) and gazebo simulation world file.
+  * volta_localization - Sensor fusion of wheel odometry and IMU data using the robot localization package.
+  * Volta_navigation - Navigation configurations .
+  * volta_teleoperation - Control the robot using keyboard or Joystick.
 
-## Steps to Launch:
-### step 1 create the catkin_ws
-```
-$ mkdir -p /home/workspace/catkin_ws/src
-$ cd /home/workspace/catkin_ws/src
-$ catkin_init_workspace
-$ cd ..
-$ catkin_make
-```
+## Steps to Launch Volta:
 
-### Step 2 Perform a System Update/Upgrade
+### 1. Launching a Gazebo Simulation environment
+ * To bring up a gazebo world, launch the gazebo node by running:  
 ```
-$ apt-get update
-$ apt-get upgrade -y
+    $ roslaunch volta_description gazebo.launch 
 ```
-### Step 3 Clone the Package in src
+ * Once the gazebo simulation environment is launched, run the following to load the Volta robot:  
 ```
-$ cd /home/workspace/catkin_ws/src
-$ git clone https://github.com/botsync/volta_simulation
+    $ roslaunch volta_description simulation.launch 
 ```
-### Step 4 Build the Packages
+ * For visualization, launch rviz by running:        
+ ```
+    $ rosrun rviz rviz
 ```
-$ catkin_make
-$ source devel/setup.bash
-```
-### Step 5 For mapping the environment
-```
-$ cd /home/workspace/catkin_ws/src
-$ ./Mapping.sh 
-```
-### Step 5 For Navigating the environment
-```
-$ cd /home/workspace/catkin_ws/src
-$ ./Navigation.sh 
-```
+   The configuration file, volta.rviz which is located under volta_description->rviz_params, can be opened in the rviz tool to load the volta configured rviz environment
 
+ * In order to start the teleoperation node using keyboard, run the following:  :        
+ ```
+    $ roslaunch volta_teleoperator volta_teleoperator.launch keyboard:=true 
+```
+ * To launch the joystick node, set the keyboard argument to False (Default case:= false) or run the following:       
+ ```
+    $ roslaunch volta_teleoperator volta_teleoperator.launch  
+```
+   
