@@ -1,10 +1,10 @@
 # Volta
 ROS packages used to run the Volta only in simulation
 
-  * Volta_control - Control configuration required for ROS control.
-  * Volta_description - Volta Robot description (URDF files) and gazebo simulation world file.
+  * volta_control - Control configuration required for ROS control.
+  * volta_description - Volta Robot description (URDF files) and gazebo simulation world file.
   * volta_localization - Sensor fusion of wheel odometry and IMU data using the robot localization package.
-  * Volta_navigation - Navigation configurations .
+  * volta_navigation - Navigation configurations .
   * volta_teleoperation - Control the robot using keyboard or Joystick.
 
 ## Steps to Launch Volta:
