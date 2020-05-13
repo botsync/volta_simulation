@@ -56,3 +56,16 @@ $ roslaunch volta_teleoperator teleoperator.launch keyboard:=true
 $ roslaunch map_server map_saver –f <filename>
 ```
    
+### 3. Navigation with Volta
+ * Once the gazebo world is launched and the Volta robot is loaded into the simulation environment, the navigaation node can be launched by running:   
+```
+$ roslaunch volta_navigation navigation.launch 
+```
+
+ * This will launch the navigation node. On a separate terminal, launch the rviz visualization tool by running:   
+```
+$ rosrun rviz rviz  
+```
+You can then open the volta configured rviz environment by opening the volta rviz config file, located under volta_navigation->rviz_config->navigation.rviz, from the rviz tool 
+ 
+Use the 2D Nav Goal tool in the top toolbar to select a navigation goal in the visualizer. Ensure that the nav goal is given in a mapped section of the map 
