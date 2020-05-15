@@ -16,6 +16,6 @@ include_directories(
 )
 
 install(
-  DIRECTORY launch meshes rviz_params urdf words
+  DIRECTORY launch meshes rviz_params urdf
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
