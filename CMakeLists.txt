@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(volta_simulation)
 
-find_package(catkin REQUIRED)
+find_package(catkin REQUIRED COMPONENTS roslaunch)
 
 catkin_package ()
 
