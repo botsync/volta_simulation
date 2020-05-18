@@ -1,67 +1,67 @@
 # Volta
+ROS packages used to run the Volta in simulation
 
-# To Do
+* volta_simulation - Gazebo simulation world file.
 
-- [ ] ROS Control Test on physical robot
-- [ ] Odometry Test on Physical Robot
-- [ ] PID control tuning
-- [ ] IMU Test
-- [ ] LIDAR Test
-- [ ] Camera Test
-- [ ] Configure On Board PC
-- [ ] Localization Test
-- [ ] Mapping Test
-- [ ] Update Instructions in README.md
-- [ ] Create  base package for public repo
-- [ ] Code Review (Nikhil Venkatesh)
-- [ ] Publish Public Repo (Nikhil Venkatesh)
+## Steps to Launch Volta:
 
-## Optimization
+### 1. Launching a Gazebo Simulation environment
+ * To bring up a gazebo world, launch the gazebo node by running:  
+```
+$ roslaunch volta_simulation gazebo.launch 
+```
+ * Once the gazebo simulation environment is launched, run the following to spawn the Volta robot:  
+ ```
+$ roslaunch volta_simulation simulation.launch 
+```
+ * For visualization, launch rviz by running:        
+ ```
+ $ rosrun rviz rviz
+```
+   The configuration file, volta.rviz which is located under volta_description->rviz_params, can be opened in the rviz tool to load the volta configured rviz environment
 
-- [ ] Contoller and Interface Board Update - reduce number of wires, add programming switch, add DB9 connector
-- [ ] Change serial library for latency reduction
+ * In order to start the teleoperation node using keyboard, run the following:  :        
+ ```
+ $ roslaunch volta_teleoperator volta_teleoperator.launch keyboard:=true 
+```
+ * To launch the joystick node, set the keyboard argument to False (Default case:= false) or run the following:       
+ ```
+ $ roslaunch volta_teleoperator volta_teleoperator.launch  
+```
+   
+   
+### 2. Mapping an environment with Volta
+ * Once the gazebo world is launched and the Volta robot is spawned into the simulation environment, the mapping node can be launched by running:   
+```
+$ roslaunch volta_navigation navigation.launch gmapping:=true  
+```
 
-# Running the Simulation
+ * This will launch the gmapping node. On a separate terminal, launch the rviz visualization tool by running:   
+```
+$ rosrun rviz rviz  
+```
+You can then open the volta configured rviz environment by opening the volta rviz config file, located under volta_navigation->rviz_config->navigation.rviz, from the rviz tool 
+ 
+ * In order to control the robot, launch the teleoperation node by running:     
+```
+$ roslaunch volta_teleoperator teleoperator.launch keyboard:=true 
+```
+    
+ * Once the mapping of the entire environment is completed, the map can be saved by running:     
+```
+$ roslaunch map_server map_saver –f <filename>
+```
+   
+### 3. Navigation with Volta
+ * Once the gazebo world is launched and the Volta robot is spawned into the simulation environment, the navigaation node can be launched by running:   
+```
+$ roslaunch volta_navigation navigation.launch 
+```
 
-## Bringing up the simulation
-1. To run in Simulation, launch the gazebo node first using
-```roslaunch volta_description gazebo.launch```
-2. Followed by:
-```roslaunch volta_description simulation.launch```
-3. Open Rviz and use the config file at volta_navigation/rviz_config/navigation.rviz to visualize.
-
-By default a map of the simulation environment has been built and stored for convenience sake. 
-
-## Mapping the environment 
-To change the environment in the simulation, update the argument in the gazebo.launch file with the exact path to the world file.
-
-You will need to run mapping. You can simply use the argument in one_robot.launch to turn gmapping true.
-```roslaunch volta_description one_robot.launch gmapping:=true```
-
-To visualize the map updations, use rviz and open this config volta_navigation/rviz_config/navigation.rviz.
-
-To save the map, run ```rosrun map_server map_saver```
-
-# Running Online
-
-## Bringing up the robot
-1. ```roslaunch volta_base volta_bringup.launch```
-2. ```roslaunch volta_base volta_base.launch```
-
-These two commands will bringup the robot for teleoperation and start the odometry filter as well. In order to visualize the robot, use rviz.
-
-## Mapping an Environment
-1. ```roslaunch volta_navigation navigation.launch gmapping:=true```
-
-This command should start mapping the environment. To visualize the map, use rviz. Open the configuration, volta_navigation/rviz_config/navigation.rviz.
-
-Once the mapping process is completed, save the map by running the following command.
-1. ```rosrun map_server map_saver```
-
-## Running Navigation
-Before you can navigate without gmapping running, you will need to have a saved map. 
-Edit the map file argument with the path to the exact map file.
-
-1. ```roslaunch volta_navigation navigation.launch```
-
-To visualize the navigation, use rviz. Open the configuration, volta_navigation/rviz_config/navigation.rviz.
+ * This will launch the navigation node. On a separate terminal, launch the rviz visualization tool by running:   
+```
+$ rosrun rviz rviz  
+```
+You can then open the volta configured rviz environment by opening the volta rviz config file, located under volta_navigation->rviz_config->navigation.rviz, from the rviz tool 
+ 
+Use the 2D Nav Goal tool in the top toolbar to select a navigation goal in the visualizer. Ensure that the nav goal is given in a mapped section of the map 
