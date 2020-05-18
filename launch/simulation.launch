@@ -1,7 +1,7 @@
 <launch>
-    <arg name="initX" default="0"/>
-    <arg name="initY" default="0"/>
-    <arg name="initYaw" default="0"/>
+    <arg name="initX" default="-7"/>
+    <arg name="initY" default="-3"/>
+    <arg name="initYaw" default="1.5708"/>
 
     <arg name="model" default="$(find volta_description)/urdf/volta.xacro"/>
 
