@@ -2,6 +2,6 @@
 Changelog for package volta_simulation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.0 (2020-11-19)
+------------------
 * First Release
