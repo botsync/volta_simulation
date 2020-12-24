@@ -18,6 +18,5 @@
 
     <include file="$(find volta_localization)/launch/localization.launch" />
 
-    <node name="robot_pose_publisher" pkg="robot_pose_publisher" type="robot_pose_publisher" respawn="true"/>
 
 </launch>
