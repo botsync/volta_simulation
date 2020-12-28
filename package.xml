@@ -7,7 +7,8 @@
   <author email="nikhil@botsync.co">Nikhil Venkatesh</author>
   <author email="mahendra.l@botsync.co">Mahendra L Seervi</author>
 
-  <maintainer email="mahendra.l@botsync.co">Mahendra L Seervi</maintainer>
+  <maintainer email="nikhil@botsync.co">Nikhil Venkatesh</maintainer>
+  <maintainer email="toship.s@botsync.co">Toship</maintainer>
 
   <license>BSD-3-Clause</license>
 
@@ -17,7 +18,6 @@
   <exec_depend>gazebo_plugins</exec_depend>
   <exec_depend>gazebo_ros</exec_depend>
   <exec_depend>gazebo_ros_control</exec_depend>
-  <exec_depend>hector_gazebo_plugins</exec_depend>
   <exec_depend>volta_control</exec_depend>
   <exec_depend>volta_description</exec_depend>
   <exec_depend>rostopic</exec_depend>
