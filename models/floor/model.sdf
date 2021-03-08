@@ -1,0 +1,50 @@
+<?xml version='1.0' ?>
+<sdf version='1.6'>
+  <model name='floor'>
+    <static>true</static>
+    <link name='link'>
+      <collision name='collision'>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>100 100</size>
+          </plane>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+        <contact>
+          <ode/>
+        </contact>
+        <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <self_collide>0</self_collide>
+      <enable_wind>0</enable_wind>
+      <kinematic>0</kinematic>
+      <visual name='visual'>
+        <geometry>
+          <mesh>
+            <scale>0.99 0.99 1</scale>
+            <uri>model://volta_simulation/models/floor/meshes/floor.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://volta_simulation/models/floor/materials/scripts</uri>
+            <uri>model://volta_simulation/models/floor/materials/textures</uri>
+            <name>floor</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

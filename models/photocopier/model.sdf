@@ -1,0 +1,49 @@
+<?xml version='1.0' ?>
+<sdf version='1.6'>
+  <model name='photocopier'>
+    <static>false</static>
+    <link name='link'>
+      <collision name='collision'>
+        <geometry>
+          <mesh>
+            <uri>model://volta_simulation/models/photocopier/meshes/photocopier.dae</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='visual'>
+        <geometry>
+          <mesh>
+            <uri>model://volta_simulation/models/photocopier/meshes/photocopier.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+        	  <script>
+        	    <uri>model://volta_simulation/models/photocopier/materials/scripts</uri>
+        	    <uri>model://volta_simulation/models/photocopier/materials/textures</uri>
+        	    <name>photocopier</name>
+        	  </script>
+        </material>
+      </visual>
+      <inertial>
+        <pose>-0.01423 0.0076 0.48843 0 0 0</pose>
+        <mass>30</mass>
+        <inertia>
+          <ixx>6.4610511803 </ixx>
+          <iyy>6.5868357872 </iyy>
+          <izz>1.70465113158</izz>
+          <ixy>-0.00784812122</ixy>
+          <ixz>-0.30363670069 </ixz>
+          <iyz>-0.0689382429</iyz>
+        </inertia>
+      </inertial>
+    </link>
+  </model>
+</sdf>

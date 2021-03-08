@@ -4486,7 +4486,7 @@
           <pose frame=''>0 0 -0.02 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://person_walking/meshes/walking.dae</uri>
+              <uri>model://volta_simulation/models/person_walking/meshes/walking.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -4508,7 +4508,7 @@
           <pose frame=''>0 0 -0.02 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://person_walking/meshes/walking.dae</uri>
+              <uri>model://volta_simulation/models/person_walking/meshes/walking.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -4536,8 +4536,8 @@
           <pose frame=''>0.003937 0.004724 -0.18 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://coke_can/meshes/coke_can.dae</uri>
-              <scale>1 1 1</scale>
+              <uri>model://volta_simulation/models/coke_can/meshes/coke_can.dae</uri>
+              <scale>0.5 0.5 0.5</scale>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -4558,8 +4558,8 @@
           <pose frame=''>0.003937 0.004724 -0.18 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://coke_can/meshes/coke_can.dae</uri>
-              <scale>1 1 1</scale>
+              <uri>model://volta_simulation/models/coke_can/meshes/coke_can.dae</uri>
+              <scale>0.5 0.5 0.5</scale>
             </mesh>
           </geometry>
         </visual>
@@ -4586,7 +4586,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>model://first_2015_trash_can/meshes/trash_can.dae</uri>
+              <uri>model://volta_simulation/models/first_2015_trash_can/meshes/trash_can.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -4594,7 +4594,7 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>model://first_2015_trash_can/meshes/trash_can.dae</uri>
+              <uri>model://volta_simulation/models/first_2015_trash_can/meshes/trash_can.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -4657,7 +4657,7 @@
           <pose frame=''>0 0 0.02 0.04 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://person_standing/meshes/standing.dae</uri>
+              <uri>model://volta_simulation/models/person_standing/meshes/standing.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -4679,7 +4679,7 @@
           <pose frame=''>0 0 0.02 0.04 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://person_standing/meshes/standing.dae</uri>
+              <uri>model://volta_simulation/models/person_standing/meshes/standing.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>

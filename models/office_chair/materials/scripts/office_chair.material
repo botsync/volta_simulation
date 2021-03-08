@@ -1,0 +1,14 @@
+material office_chair
+{
+   technique
+   {
+      pass
+      {
+         texture_unit
+	 {
+	   texture office_chair.png
+	 }
+
+      }
+   }
+}

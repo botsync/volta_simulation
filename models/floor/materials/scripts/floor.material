@@ -1,0 +1,16 @@
+material floor
+{
+   technique
+   {
+      pass
+      {
+         texture_unit
+	 {
+   texture floor.jpg
+   rotate 90
+   scale 1.0 0.03
+	 }
+
+      }
+   }
+}

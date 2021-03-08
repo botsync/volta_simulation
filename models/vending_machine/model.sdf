@@ -1,0 +1,49 @@
+<?xml version='1.0' ?>
+<sdf version='1.6'>
+  <model name='vending_machine'>
+    <static>true</static>
+    <link name='link'>
+      <collision name='collision'>
+        <geometry>
+          <mesh>
+            <uri>model://volta_simulation/models/vending_machine/meshes/vending_machine.dae</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='visual'>
+        <geometry>
+          <mesh>
+            <uri>model://volta_simulation/models/vending_machine/meshes/vending_machine.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://volta_simulation/models/vending_machine/materials/scripts</uri>
+            <uri>model://volta_simulation/models/vending_machine/materials/textures</uri>
+            <name>vending_machine</name>
+          </script>
+        </material>
+      </visual>
+      <inertial>
+        <pose>-0.02087656 0.00080827 -0.14148698 0 0 0</pose>
+        <mass>3</mass>
+        <inertia>
+          <ixx>0.13667489 </ixx>
+          <iyy>0.11757832 </iyy>
+          <izz>0.16535604</izz>
+          <ixy>0</ixy>
+          <ixz>0 </ixz>
+          <iyz>0</iyz>
+        </inertia>
+      </inertial>
+    </link>
+  </model>
+</sdf>

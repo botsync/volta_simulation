@@ -1,0 +1,14 @@
+material metal_cabinet
+{
+   technique
+   {
+      pass
+      {
+         texture_unit
+	 {
+	   texture metal_cabinet.png
+	 }
+
+      }
+   }
+}

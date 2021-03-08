@@ -1,0 +1,44 @@
+<?xml version='1.0' ?>
+<sdf version='1.6'>
+  <model name='lounge_chair'>
+    <static>false</static>
+    <link name='link'>
+      <collision name='collision'>
+        <pose>-0 0 0 0 0 1.570796</pose>
+        <geometry>
+          <mesh>
+            <uri>model://volta_simulation/models/lounge_chair/meshes/lounge_chair.dae</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='visual'>
+        <pose>-0 0 0 0 0 1.570796</pose>
+        <geometry>
+          <mesh>
+            <uri>model://volta_simulation/models/lounge_chair/meshes/lounge_chair.dae</uri>
+          </mesh>
+        </geometry>
+     </visual>
+      <inertial>
+        <pose>-0.1 0 0.3 0 0 0</pose>
+        <mass>15</mass>
+        <inertia>
+          <ixx>2.1 </ixx>
+          <iyy>2.1 </iyy>
+          <izz>2.0</izz>
+          <ixy>0</ixy>
+          <ixz>0.25</ixz>
+          <iyz>0</iyz>
+        </inertia>
+      </inertial>
+    </link>
+  </model>
+</sdf>
