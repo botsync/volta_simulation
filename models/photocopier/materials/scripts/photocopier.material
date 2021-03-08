@@ -1,0 +1,14 @@
+material photocopier
+{
+   technique
+   {
+      pass
+      {
+         texture_unit
+	 {
+	   texture photocopier.png
+	 }
+
+      }
+   }
+}

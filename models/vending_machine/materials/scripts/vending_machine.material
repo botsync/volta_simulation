@@ -1,0 +1,15 @@
+material vending_machine
+{
+   technique
+   {
+      pass
+
+      {
+         texture_unit
+	 {
+	   texture vending_machine.png
+	 }
+
+      }
+   }
+}

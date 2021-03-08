@@ -6,13 +6,17 @@ ROS packages used to run the Volta in simulation
 ## Steps to Launch Volta:
 
 ### 1. Launching a Gazebo Simulation environment
- * To bring up a gazebo world, launch the gazebo node by running:  
+ * Before launching the simulation, setup the model path by running the following:
 ```
-$ roslaunch volta_simulation gazebo.launch 
+$ echo "export GAZEBO_MODEL_PATH=~/volta_ws/src/:$GAZEBO_MODEL_PATH">>~/.bashrc
+```
+ * To bring up our default gazebo world, launch the gazebo node by running:  
+```
+$ roslaunch volta_simulation gazebo.launch indoor:=true
 ```
  * Once the gazebo simulation environment is launched, run the following to spawn the Volta robot:  
  ```
-$ roslaunch volta_simulation simulation.launch 
+$ roslaunch volta_simulation simulation.launch indoor:=true
 ```
  * For visualization, launch rviz by running:        
  ```
@@ -22,11 +26,11 @@ $ roslaunch volta_simulation simulation.launch
 
  * In order to start the teleoperation node using keyboard, run the following:  :        
  ```
- $ roslaunch volta_teleoperator volta_teleoperator.launch keyboard:=true 
+ $ roslaunch volta_teleoperator teleoperator.launch keyboard:=true 
 ```
  * To launch the joystick node, set the keyboard argument to False (Default case:= false) or run the following:       
  ```
- $ roslaunch volta_teleoperator volta_teleoperator.launch  
+ $ roslaunch volta_teleoperator teleoperator.launch  
 ```
    
    

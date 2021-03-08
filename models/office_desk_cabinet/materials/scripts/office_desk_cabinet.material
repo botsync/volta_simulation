@@ -1,0 +1,14 @@
+material office_desk_cabinet
+{
+   technique
+   {
+      pass
+      {
+         texture_unit
+	 {
+	   texture office_desk_cabinet.png
+	 }
+
+      }
+   }
+}

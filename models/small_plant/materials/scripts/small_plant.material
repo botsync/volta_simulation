@@ -1,0 +1,14 @@
+material small_plant
+{
+   technique
+   {
+      pass
+      {
+         texture_unit
+	 {
+	   texture small_plant.jpg
+	 }
+
+      }
+   }
+}

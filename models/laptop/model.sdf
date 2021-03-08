@@ -1,0 +1,42 @@
+<?xml version='1.0' ?>
+<sdf version='1.6'>
+  <model name='laptop'>
+    <static>false</static>
+    <link name='link'>
+      <collision name='collision'>
+        <geometry>
+          <mesh>
+            <uri>model://volta_simulation/models/laptop/meshes/laptop.dae</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='visual'>
+        <geometry>
+          <mesh>
+            <uri>model://volta_simulation/models/laptop/meshes/laptop.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <inertial>
+        <pose>-0.01 0 0.035 0 0 0</pose>
+        <mass>2</mass>
+        <inertia>
+          <ixx>0.021 </ixx>
+          <iyy>0.025 </iyy>
+          <izz>0.03</izz>
+          <ixy>0</ixy>
+          <ixz>0.02</ixz>
+          <iyz>0</iyz>
+        </inertia>
+      </inertial>
+    </link>
+  </model>
+</sdf>

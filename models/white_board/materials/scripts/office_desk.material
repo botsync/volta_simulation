@@ -1,0 +1,14 @@
+material white_board
+{
+   technique
+   {
+      pass
+      {
+         texture_unit
+	 {
+	   texture white_board.png
+	 }
+
+      }
+   }
+}

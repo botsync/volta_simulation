@@ -1,0 +1,14 @@
+material kitchen
+{
+   technique
+   {
+      pass
+      {
+         texture_unit
+	 {
+	   texture kitchen.png
+	 }
+
+      }
+   }
+}

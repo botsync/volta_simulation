@@ -1,7 +1,27 @@
+<?xml version="1.0"?>
 <launch>
-    <arg name="initX" default="-7"/>
-    <arg name="initY" default="-3"/>
-    <arg name="initYaw" default="1.5708"/>
+    <!-- indoor world spawn pose -->
+    <arg name="indoor" default="false"/>
+    <arg if="$(arg indoor)" name="initX" default="-7"/>
+    <arg if="$(arg indoor)" name="initY" default="-3"/>
+    <arg if="$(arg indoor)" name="initYaw" default="1.5708"/>
+
+    <arg name="indoor_dynamic" default="false"/>
+    <arg if="$(arg indoor_dynamic)" name="initX" default="-7"/>
+    <arg if="$(arg indoor_dynamic)" name="initY" default="-3"/>
+    <arg if="$(arg indoor_dynamic)" name="initYaw" default="1.5708"/>
+
+    <!-- office world spawn pose -->
+    <arg name="office" default="false"/>
+    <arg if="$(arg office)" name="initX" value="0"/>
+    <arg if="$(arg office)" name="initY" value="0"/>
+    <arg if="$(arg office)" name="initYaw" value="-1.5708"/>
+    
+    <!-- office world with non-static models for more realistic collision simulation -->
+    <arg name="office_full" default="true"/>
+    <arg if="$(arg office_full)" name="initX" value="0"/>
+    <arg if="$(arg office_full)" name="initY" value="0"/>
+    <arg if="$(arg office_full)" name="initYaw" value="-1.5708"/> 
 
     <arg name="model" default="$(find volta_description)/urdf/volta.xacro"/>
 
@@ -18,5 +38,6 @@
 
     <include file="$(find volta_localization)/launch/localization.launch" />
 
+    <node name="robot_pose_publisher" pkg="robot_pose_publisher" type="robot_pose_publisher" respawn="true"/>
 
 </launch>
