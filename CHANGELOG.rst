@@ -2,8 +2,8 @@
 Changelog for package volta_simulation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.1 (2021-03-22)
+------------------
 * Added gazebo models and updated launch files.
 * Kinetic devel r2 update to melodic (`#4 <https://github.com/botsync/volta_simulation/issues/4>`_)
   * Updated Version, license
